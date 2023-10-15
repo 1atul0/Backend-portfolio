@@ -19,6 +19,10 @@ const contactEmail = nodemailer.createTransport({
   },
 });
 
+app.get("/",function(req,res){
+  res.send("i am working from backend")
+})
+
 contactEmail.verify((error) => {
   if (error) {
     console.log(error);
